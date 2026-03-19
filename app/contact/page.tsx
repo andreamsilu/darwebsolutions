@@ -141,19 +141,16 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="group relative h-64 w-full overflow-hidden rounded-xl bg-slate-200 shadow-inner">
-                <img
-                  className="h-full w-full object-cover opacity-50 grayscale transition-opacity group-hover:opacity-80"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsZYXgMFWaa2g4f_L5l0QBXlX7gtdhcb0aoMUn1vVrbVuCM3bheY05_wBix_eGEZci1ZS_IyZaxSQsnNaSZz8rQieFpznCpKiz2XRZjtwWoePsBD0cwWgQVUCNAUoEByfd0QI9AvLqOJzEooRCZid4ne08GGM3hjkBitbWQuVMRGGTPHMl6ZPHT4Wx4Tsp781atL5NNZpyJ1_wXQ10s6SwAl-UZs0zsc0sVWDM_Ecqche39bFDzbQb93prU2HAV6VHZWAYU_U_gT0"
-                  alt="Map view of Dar es Salaam business district"
+              <div className="relative h-64 w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-200 shadow-inner">
+                <iframe
+                  title="Dar Web Solutions location map"
+                  src="https://www.google.com/maps?q=Victoria%2C+New+Bagamoyo+Road%2C+Dar+es+Salaam%2C+Tanzania&z=15&output=embed"
+                  className="h-full w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="rounded-full bg-blue-800 p-4 text-white shadow-2xl">
-                    <BeaconIcon className="h-6 w-6" />
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4 rounded-lg bg-white/90 px-3 py-1.5 text-xs font-bold text-blue-900 backdrop-blur">
-                  VISIT US IN VICTORIA
+                <div className="pointer-events-none absolute bottom-4 left-4 rounded-lg bg-white/95 px-3 py-1.5 text-xs font-bold text-blue-900 shadow">
+                  VICTORIA, DAR ES SALAAM
                 </div>
               </div>
 

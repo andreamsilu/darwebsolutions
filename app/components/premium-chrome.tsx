@@ -9,8 +9,8 @@ type PremiumNavProps = {
 
 function navClass(active: boolean) {
   return active
-    ? "border-b-2 border-amber-300 pb-1 font-bold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 rounded-sm"
-    : "text-blue-100 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 rounded-sm";
+    ? "inline-flex min-h-11 items-center border-b-2 border-amber-300 pb-1 font-bold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 rounded-sm"
+    : "inline-flex min-h-11 items-center text-blue-100 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 rounded-sm";
 }
 
 export function PremiumNav({ active }: PremiumNavProps) {
@@ -36,14 +36,14 @@ export function PremiumNav({ active }: PremiumNavProps) {
         </div>
         <div className="flex items-center gap-4">
           <Link
-            className="hidden rounded-xl px-4 py-2 font-medium text-blue-100 transition-all hover:bg-blue-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 lg:block"
+            className="hidden min-h-11 items-center rounded-xl px-4 py-2 font-medium text-blue-100 transition-all hover:bg-blue-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 lg:inline-flex"
             href="https://wa.me/255000000000"
             target="_blank"
           >
             WhatsApp
           </Link>
           <button
-            className="rounded-xl bg-amber-300 px-6 py-2.5 font-semibold text-amber-950 transition-transform hover:bg-amber-200 active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-100 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900"
+            className="inline-flex min-h-11 items-center rounded-xl bg-amber-300 px-6 py-2.5 font-semibold text-amber-950 transition-transform hover:bg-amber-200 active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-100 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900"
             type="button"
           >
             Get Started
@@ -70,10 +70,10 @@ export function PremiumFooter() {
             Explore
           </h4>
           <ul className="space-y-4">
-            <li><Link className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/">Home</Link></li>
-            <li><Link className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/solution">Services</Link></li>
-            <li><Link className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/demo">Portfolio</Link></li>
-            <li><Link className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/contact">Contact</Link></li>
+            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/">Home</Link></li>
+            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/solution">Services</Link></li>
+            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/demo">Portfolio</Link></li>
+            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="/contact">Contact</Link></li>
           </ul>
         </div>
         <div>
@@ -81,8 +81,8 @@ export function PremiumFooter() {
             Legal
           </h4>
           <ul className="space-y-4">
-            <li><a className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="#">Privacy Policy</a></li>
-            <li><a className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="#">Terms of Service</a></li>
+            <li><a className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="#">Privacy Policy</a></li>
+            <li><a className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="#">Terms of Service</a></li>
           </ul>
         </div>
         <div>
@@ -90,9 +90,9 @@ export function PremiumFooter() {
             Connect
           </h4>
           <ul className="space-y-4">
-            <li><a className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="#">LinkedIn</a></li>
-            <li><Link className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="https://instagram.com/darwebsolutions" target="_blank">Instagram</Link></li>
-            <li><Link className="text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="https://wa.me/255000000000" target="_blank">WhatsApp</Link></li>
+            <li><a className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="#">LinkedIn</a></li>
+            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="https://instagram.com/darwebsolutions" target="_blank">Instagram</Link></li>
+            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="https://wa.me/255000000000" target="_blank">WhatsApp</Link></li>
           </ul>
         </div>
         </div>
