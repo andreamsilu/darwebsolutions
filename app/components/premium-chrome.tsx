@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WhatsAppIcon } from "../ui/icons";
 
 type NavKey = "home" | "services" | "portfolio" | "contact";
 
@@ -55,8 +56,9 @@ export function PremiumNav({ active }: PremiumNavProps) {
 
 export function PremiumFooter() {
   return (
-    <footer className="bg-blue-950 text-blue-100">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-16 md:grid-cols-4">
+    <>
+      <footer className="bg-blue-950 text-blue-100">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-16 md:grid-cols-4">
         <div>
           <div className="mb-4 font-headline text-xl font-bold text-white">Dar Web Solutions</div>
           <p className="text-sm leading-relaxed text-blue-200">
@@ -93,11 +95,21 @@ export function PremiumFooter() {
             <li><Link className="text-sm text-blue-200 hover:text-white" href="https://wa.me/255000000000" target="_blank">WhatsApp</Link></li>
           </ul>
         </div>
-      </div>
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-blue-900 px-8 py-8 md:flex-row">
-        <p className="text-sm text-blue-300">© 2024 Dar Web Solutions. Built in Dar es Salaam, Tanzania.</p>
-      </div>
-    </footer>
+        </div>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-blue-900 px-8 py-8 md:flex-row">
+          <p className="text-sm text-blue-300">© 2024 Dar Web Solutions. Built in Dar es Salaam, Tanzania.</p>
+        </div>
+      </footer>
+
+      <Link
+        href="https://wa.me/255000000000"
+        target="_blank"
+        title="Chat on WhatsApp"
+        className="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform hover:scale-110 active:scale-95"
+      >
+        <WhatsAppIcon className="h-7 w-7" />
+      </Link>
+    </>
   );
 }
 

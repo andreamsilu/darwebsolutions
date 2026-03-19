@@ -8,7 +8,6 @@ import {
   InstagramIcon,
   TrendUpIcon,
   UserIcon,
-  WhatsAppIcon,
 } from "./ui/icons";
 
 export default function Home() {
@@ -163,12 +162,6 @@ export default function Home() {
       </main>
 
       <PremiumFooter />
-
-      <div className="fixed bottom-8 right-8 z-50 rounded-full bg-[#25D366] p-4 shadow-2xl">
-        <Link href="https://wa.me/255000000000" target="_blank" title="Contact on WhatsApp">
-          <WhatsAppIcon className="h-8 w-8 text-white" />
-        </Link>
-      </div>
 
       <div className="fixed bottom-8 left-8 z-50 rounded-full bg-white p-4 shadow-xl">
         <Link href="https://instagram.com/darwebsolutions" target="_blank" title="Follow on Instagram">
