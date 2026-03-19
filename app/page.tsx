@@ -1,289 +1,169 @@
 import Link from "next/link";
+import { PremiumFooter, PremiumNav } from "./components/premium-chrome";
 import { InstagramIcon, WhatsAppIcon } from "./ui/icons";
 
 export default function Home() {
   return (
-    <div className="bg-slate-50 text-slate-900 antialiased">
-      <nav className="fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="text-xl font-black tracking-tight text-blue-900">
-            Dar Web Solutions
-          </div>
-          <div className="hidden items-center space-x-8 text-sm font-medium md:flex">
-            <a className="border-b-2 border-blue-700 font-bold text-blue-700" href="#home">
-              Home
-            </a>
-            <a className="text-slate-600 transition-all duration-300 hover:text-blue-600" href="#services">
-              Services
-            </a>
-            <a className="text-slate-600 transition-all duration-300 hover:text-blue-600" href="#portfolio">
-              Portfolio
-            </a>
-            <a className="text-slate-600 transition-all duration-300 hover:text-blue-600" href="#contact">
-              Contact
-            </a>
-          </div>
-          <Link
-            className="rounded-md bg-blue-800 px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:opacity-90 active:scale-95"
-            href="https://wa.me/255000000000"
-            target="_blank"
-          >
-            WhatsApp
-          </Link>
-        </div>
-      </nav>
+    <div className="bg-slate-50 font-body text-slate-900 selection:bg-blue-100 selection:text-blue-900">
+      <PremiumNav active="home" />
 
-      <main>
-        <section className="relative overflow-hidden pb-20 pt-32 md:pb-32 md:pt-48" id="home">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-12">
-            <div className="space-y-6 md:col-span-7">
-              <span className="text-sm font-bold uppercase tracking-widest text-amber-700">
-                Premium Web Design
-              </span>
-              <h1 className="text-5xl font-extrabold leading-tight text-blue-900 md:text-7xl">
-                We Build Simple Websites for Businesses in Dar es Salaam
-              </h1>
-              <p className="max-w-xl text-lg text-slate-600 md:text-xl">
-                Get more customers with WhatsApp ordering - fast, simple, professional.
+      <main className="pb-20 pt-28">
+        <header className="mx-auto mb-24 max-w-7xl px-8">
+          <span className="mb-4 block font-headline text-sm font-bold uppercase tracking-[0.2em] text-amber-700">
+            Our Expertise
+          </span>
+          <h1 className="mb-8 max-w-4xl font-headline text-5xl font-extrabold leading-tight text-blue-900 md:text-7xl">
+            Building Digital Growth for <span className="text-amber-700">Tanzanian</span> Business.
+          </h1>
+          <p className="max-w-2xl text-xl leading-relaxed text-slate-600">
+            We bridge the gap between complex technology and local market needs. Simple, fast, and
+            designed to convert visitors into loyal customers.
+          </p>
+        </header>
+
+        <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-12">
+          <div className="relative overflow-hidden rounded-3xl bg-white p-12 shadow-xl md:col-span-8">
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-800/10">
+                <span className="text-3xl text-blue-800">🌐</span>
+              </div>
+              <h2 className="mb-4 font-headline text-3xl font-bold text-blue-900">
+                Professional Business Websites
+              </h2>
+              <p className="mb-8 max-w-lg text-lg text-slate-600">
+                We create bespoke digital identities that establish authority. No templates - just custom
+                architecture built for performance and trust.
               </p>
-              <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-                <Link
-                  className="flex items-center justify-center gap-2 rounded-md bg-amber-200 px-8 py-4 text-center font-bold text-amber-900 shadow-lg transition-transform hover:-translate-y-1"
-                  href="https://wa.me/255000000000"
-                  target="_blank"
-                >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  Chat on WhatsApp
-                </Link>
-                <a
-                  className="rounded-md border border-slate-300 px-8 py-4 text-center font-bold transition-colors hover:bg-slate-100"
-                  href="#portfolio"
-                >
+              <ul className="mb-8 grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2">
+                {[
+                  "Custom UI/UX Design",
+                  "SEO Optimized Layouts",
+                  "Mobile-First Response",
+                  "Local Hosting Support",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="text-xl text-amber-700">✓</span>
+                    <span className="font-medium text-slate-900">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-linear-to-br from-blue-800/10 to-transparent blur-3xl" />
+          </div>
+
+          <div className="relative flex flex-col justify-between overflow-hidden rounded-3xl bg-blue-800 p-12 text-white md:col-span-4">
+            <div>
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-white/10">
+                <span className="text-3xl text-white">⚡</span>
+              </div>
+              <h2 className="mb-4 font-headline text-3xl font-bold">Rapid 2-3 Day Delivery</h2>
+              <p className="mb-6 text-blue-100">
+                Business does not wait. Our optimized workflow ensures your landing page is live in less
+                than 72 hours.
+              </p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
+              <div className="mb-2 flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-widest">Project Pulse</span>
+                <span className="text-xs font-bold text-amber-300">Active</span>
+              </div>
+              <div className="h-1 w-full overflow-hidden rounded-full bg-white/20">
+                <div className="h-full w-3/4 bg-amber-300" />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-12 rounded-3xl bg-slate-100 p-12 md:col-span-12 lg:col-span-7 md:flex-row md:items-center">
+            <div className="flex-1">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-amber-700/10">
+                <span className="text-3xl text-amber-700">💬</span>
+              </div>
+              <h2 className="mb-4 font-headline text-3xl font-bold text-blue-900">
+                WhatsApp Ordering Integration
+              </h2>
+              <p className="mb-8 text-lg text-slate-600">
+                In Tanzania, WhatsApp is where business happens. We turn your website into a direct sales
+                machine by linking your product catalog directly to your WhatsApp inbox.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                {["One-Click Checkout", "Order Automation", "Catalog Sync"].map((item) => (
+                  <div key={item} className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="w-full max-w-sm flex-1">
+              <div className="relative rounded-xl bg-white p-6 shadow-xl">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">
+                    👤
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-400">CUSTOMER</div>
+                    <div className="text-sm font-bold">New Order Received</div>
+                  </div>
+                </div>
+                <div className="mb-2 rounded-lg border-l-4 border-green-500 bg-green-50 p-3">
+                  <p className="text-xs font-medium text-green-800">
+                    &quot;I&apos;d like to order the Executive Package from the website!&quot;
+                  </p>
+                </div>
+                <div className="text-right text-[10px] text-slate-400">Just now via WhatsApp</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-3xl bg-amber-200 p-12 md:col-span-12 lg:col-span-5">
+            <div className="relative z-10 flex h-full flex-col justify-center">
+              <h2 className="mb-4 font-headline text-3xl font-bold text-amber-900">Market Strategy</h2>
+              <p className="mb-8 leading-relaxed text-amber-900/80">
+                We do not just build sites; we advise on how to reach the local Dar and Arusha markets
+                effectively through digital presence.
+              </p>
+              <div className="mt-auto text-4xl font-black text-amber-900/20">CONSULT</div>
+            </div>
+            <div className="absolute bottom-0 right-0 text-[12rem] opacity-10">↗</div>
+          </div>
+        </section>
+
+        <section className="mx-auto mt-32 max-w-7xl px-8">
+          <div className="relative overflow-hidden rounded-3xl bg-blue-900 p-16 text-center text-white">
+            <div className="relative z-10">
+              <h2 className="mb-6 font-headline text-4xl font-extrabold md:text-5xl">
+                Ready to fix your digital presence?
+              </h2>
+              <p className="mx-auto mb-10 max-w-2xl text-xl text-blue-100">
+                Start your journey with Dar Web Solutions today. We will have you online and ready for
+                business before the week is out.
+              </p>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                <button className="rounded-xl bg-amber-300 px-8 py-4 text-lg font-bold text-amber-950 transition-transform hover:scale-105">
+                  Get Started Now
+                </button>
+                <button className="rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20">
                   View Our Work
-                </a>
-              </div>
-            </div>
-            <div className="relative md:col-span-5">
-              <div className="relative z-10 overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-xl">
-                <img
-                  alt="Website Mockup"
-                  className="w-full rounded-lg"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTj0NuzlUQvYt6KdgNAZWR3aKPljW7b1F6O2Hyq8e6rP_L6LJ6Uooa1AfyxnJsyFqbU1ApzTwQSDkgDViEPkk8PigWxNX2laMPlfSN2il9IRHnFxu3qxHUKamBKMCXcguCzd2vJ498yI5b5Y7wElMqBBfBlrI3OOnwxIAHbHQmUbDEqXIROHNWa0rGVHVidwiHJnCJp1jLw496hfaccdBEGvzRTT7JFDkwskaRbGk2hvb3PzLb9qO6gbb0XdJ_416Bo4l5kAfxmo"
-                />
-              </div>
-              <div className="absolute -right-12 -top-12 -z-10 h-64 w-64 rounded-full bg-blue-800/10 blur-3xl" />
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-100 py-24">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mb-16 max-w-3xl">
-              <h2 className="mb-4 text-3xl font-bold md:text-5xl">Are You Losing Customers Online?</h2>
-              <p className="text-lg text-slate-600">
-                Generic social media pages are not enough to build a lasting brand. Many Dar businesses
-                face these common struggles.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {[
-                ["Only WhatsApp", "Relying solely on status updates means your products disappear after 24 hours."],
-                ["Customers do not trust business", "Without a professional website, customers worry about legitimacy."],
-                ["Hard to manage orders", "Manually taking every detail via chat leads to mistakes."],
-              ].map(([title, body]) => (
-                <div key={title} className="rounded-xl bg-white p-10 shadow-lg transition-all hover:bg-slate-50">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-rose-100 text-rose-700">
-                    !
-                  </div>
-                  <h3 className="mb-3 text-xl font-bold">{title}</h3>
-                  <p className="leading-relaxed text-slate-600">{body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-blue-900 py-24 text-white" id="services">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mb-20 text-center">
-              <h2 className="mb-4 text-3xl font-bold md:text-5xl">We Fix This For You</h2>
-              <div className="mx-auto h-1 w-20 bg-amber-300" />
-            </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {[
-                ["Simple Website", "A clean one-page site that showcases your products on any device."],
-                ["WhatsApp Integration", "Orders go directly to your WhatsApp with details pre-filled."],
-                ["Fast Delivery", "We get your professional presence live in just 2-3 business days."],
-              ].map(([title, body]) => (
-                <div key={title} className="rounded-xl border border-white/10 bg-blue-800 p-8 transition-colors hover:border-amber-300">
-                  <h3 className="mb-4 text-2xl font-bold">{title}</h3>
-                  <p className="leading-relaxed text-blue-100">{body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="overflow-hidden py-24" id="portfolio">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mb-16 flex flex-col items-end justify-between gap-8 md:flex-row">
-              <div className="max-w-2xl">
-                <h2 className="mb-4 text-3xl font-bold md:text-5xl">See a Sample Website</h2>
-                <p className="text-lg text-slate-600">
-                  Explore our recent project for a local logistics company. Modern, functional, and fast.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <button className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 hover:bg-slate-100">
-                  ←
-                </button>
-                <button className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 hover:bg-slate-100">
-                  →
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-              <div className="group relative h-[500px] overflow-hidden rounded-3xl bg-slate-200 md:col-span-8">
-                <img
-                  alt="Portfolio Site"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO7iZzRgyD0Xtq0M1DUJIwGz30789o_qvfZaRa52Nv1xgWj4fF1uWeCmilSJwSoBiOxxt1s7BfJdr1jLAZEMF5Oaj9CC7iNulO3Yat0R0Sbz_cWAt0tgZthv2c9yJkgI5DIcbMGuewh__CfxlmR-PwZWxOGImwaHzOk62ExteJInMrBnGPQJazuBacjXre4ocEZaMh4Razc7vw41hhtQzc2gCLoR3sLu3LidL5ASVW-gXonmE6M3x4y94S9pzY1hb9LW4vynfK9XI"
-                />
-              </div>
-              <div className="grid gap-8 md:col-span-4 md:grid-rows-2">
-                <div className="rounded-3xl border border-slate-200 bg-slate-100 p-8">
-                  <h4 className="mb-2 font-bold text-amber-700">Success Metric</h4>
-                  <p className="text-3xl font-extrabold text-blue-900">150%</p>
-                  <p className="text-slate-600">Increase in mobile orders after launch</p>
-                </div>
-                <div className="rounded-3xl bg-amber-200 p-8 text-amber-900">
-                  <h4 className="mb-2 font-bold">Client Review</h4>
-                  <p className="italic">"Dar Web Solutions changed how we talk to clients. Simple and effective!"</p>
-                  <p className="mt-4 font-bold">- Director, FastMove TZ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-100 py-24">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mb-16 text-center">
-              <h2 className="text-3xl font-bold">How It Works</h2>
-            </div>
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-              {[
-                ["Contact", "Message us on WhatsApp and tell us about your business."],
-                ["We build", "We design your professional site focused on getting sales."],
-                ["You get clients", "Launch and start receiving orders directly on WhatsApp."],
-              ].map(([title, body]) => (
-                <div key={title} className="flex flex-col items-center text-center">
-                  <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full border-4 border-blue-800 bg-white shadow-lg">
-                    ✓
-                  </div>
-                  <h3 className="mb-2 text-xl font-bold">{title}</h3>
-                  <p className="text-slate-600">{body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-24">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 md:grid-cols-2">
-            <div className="order-2 md:order-1">
-              <img
-                alt="Our Team"
-                className="rounded-3xl shadow-xl"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9uvUpZIw7YdOzx_bs2fnbyOH2-B7HBfiE9NSBg2p-HHO2oOFnIVRG6KS47aDy66s2KPCNKFJ4wmZCPIXzsIcAKNfMVThP5IwOgKZ8Ty2dbgPkoC_lkPtno0FgLrOJ4LNc7uPfO_ni5sFSAZXySAJUQXFjK9SByAq87UYL2PpXbdShvWnxzM78KiiZRoomEH_cFxaoV7Dulm-NR5X8yS6Oyy4qPKeMnzZF29gGPsxCb2hZcQUmFa9ITzYSnIcxboKA_O_qw4tjEy4"
-              />
-            </div>
-            <div className="order-1 space-y-6 md:order-2">
-              <h2 className="text-3xl font-bold">Driven by Tanzanian Excellence</h2>
-              <p className="text-lg leading-relaxed text-slate-600">
-                Dar Web Solutions helps small and medium businesses in Dar es Salaam grow online using
-                simple and effective digital tools.
-              </p>
-              <p className="text-lg leading-relaxed text-slate-600">
-                We understand the local market and build conversion bridges focused on WhatsApp, where
-                your customers already communicate.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-100 py-24" id="contact">
-          <div className="mx-auto max-w-4xl space-y-10 px-6 text-center">
-            <h2 className="text-4xl font-extrabold text-blue-900 md:text-6xl">Ready to Grow Your Business?</h2>
-            <p className="text-xl text-slate-600">
-              Let us build your professional digital presence today. No complicated jargon, just results.
-            </p>
-            <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-              <Link
-                className="flex w-full items-center justify-center gap-3 rounded-xl bg-blue-900 px-10 py-5 text-lg font-bold text-white shadow-xl transition-all hover:bg-blue-800 sm:w-auto"
-                href="https://wa.me/255000000000"
-                target="_blank"
-              >
-                <WhatsAppIcon className="h-5 w-5" />
-                WhatsApp Us Now
-              </Link>
-              <Link
-                className="flex w-full items-center justify-center gap-3 rounded-xl border border-slate-300 bg-white px-10 py-5 text-lg font-bold transition-all hover:bg-slate-50 sm:w-auto"
-                href="https://instagram.com/darwebsolutions"
-                target="_blank"
-              >
-                <InstagramIcon className="h-5 w-5" />
-                Follow on Instagram
-              </Link>
-            </div>
+            <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_center,rgba(30,64,175,0.5),transparent_70%)]" />
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-slate-200 bg-slate-50">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 py-12 md:grid-cols-4">
-          <div className="space-y-4">
-            <div className="text-lg font-bold text-blue-900">Dar Web Solutions</div>
-            <p className="text-sm text-slate-500">
-              Premium web development tailored for the Tanzanian business ecosystem.
-            </p>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-slate-500">
-              <li><a className="inline-block transition-transform hover:-translate-y-0.5 hover:text-blue-500" href="#home">Home</a></li>
-              <li><a className="inline-block transition-transform hover:-translate-y-0.5 hover:text-blue-500" href="#services">Services</a></li>
-              <li><a className="inline-block transition-transform hover:-translate-y-0.5 hover:text-blue-500" href="#portfolio">Portfolio</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Company</h4>
-            <ul className="space-y-2 text-sm text-slate-500">
-              <li><a className="inline-block transition-transform hover:-translate-y-0.5 hover:text-blue-500" href="#">Privacy Policy</a></li>
-              <li><a className="inline-block transition-transform hover:-translate-y-0.5 hover:text-blue-500" href="#">Terms of Service</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">Social</h4>
-            <ul className="space-y-2 text-sm text-slate-500">
-              <li><a className="inline-block transition-transform hover:-translate-y-0.5 hover:text-blue-500" href="https://instagram.com/darwebsolutions">Instagram</a></li>
-              <li><a className="inline-block transition-transform hover:-translate-y-0.5 hover:text-blue-500" href="#">LinkedIn</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="mx-auto max-w-7xl border-t border-slate-200 px-8 py-6 text-center">
-          <p className="text-sm text-slate-500">© 2024 Dar Web Solutions. Built for Tanzanian Excellence.</p>
-        </div>
-      </footer>
+      <PremiumFooter />
 
-      <Link
-        className="fixed bottom-8 right-8 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform hover:scale-110 active:scale-95"
-        href="https://wa.me/255000000000"
-        target="_blank"
-        title="Contact on WhatsApp"
-      >
-        <WhatsAppIcon className="h-8 w-8" />
-      </Link>
+      <div className="fixed bottom-8 right-8 z-50 rounded-full bg-[#25D366] p-4 shadow-2xl">
+        <Link href="https://wa.me/255000000000" target="_blank" title="Contact on WhatsApp">
+          <WhatsAppIcon className="h-8 w-8 text-white" />
+        </Link>
+      </div>
+
+      <div className="fixed bottom-8 left-8 z-50 rounded-full bg-white p-4 shadow-xl">
+        <Link href="https://instagram.com/darwebsolutions" target="_blank" title="Follow on Instagram">
+          <InstagramIcon className="h-7 w-7 text-pink-600" />
+        </Link>
+      </div>
     </div>
   );
 }
