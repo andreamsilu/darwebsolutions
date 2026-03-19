@@ -50,7 +50,7 @@ export default function ContactPage() {
                   className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 text-blue-900 transition-colors hover:bg-blue-800 hover:text-white"
                   href="#"
                 >
-                  in
+                  <LinkedInIcon className="h-5 w-5" />
                 </Link>
               </div>
             </div>

@@ -108,7 +108,7 @@ export default function Home() {
                     <UserIcon className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-400">CUSTOMER</div>
+                    <div className="text-xs font-bold text-slate-600">CUSTOMER</div>
                     <div className="text-sm font-bold">New Order Received</div>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function Home() {
                     &quot;I&apos;d like to order the Executive Package from the website!&quot;
                   </p>
                 </div>
-                <div className="text-right text-[10px] text-slate-400">Just now via WhatsApp</div>
+                <div className="text-right text-xs text-slate-600">Just now via WhatsApp</div>
               </div>
             </div>
           </div>

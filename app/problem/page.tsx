@@ -93,7 +93,7 @@ export default function ProblemPage() {
                     <UserIcon className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-400">CUSTOMER ALERT</div>
+                    <div className="text-xs font-bold text-slate-600">CUSTOMER ALERT</div>
                     <div className="text-sm font-bold text-slate-900">Inquiry Not Answered</div>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function ProblemPage() {
                     &quot;I sent my order yesterday but got no response.&quot;
                   </p>
                 </div>
-                <div className="mt-2 text-right text-[10px] text-slate-400">2h ago</div>
+                <div className="mt-2 text-right text-xs text-slate-600">2h ago</div>
               </div>
             </div>
           </div>

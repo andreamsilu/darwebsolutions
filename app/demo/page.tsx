@@ -108,11 +108,11 @@ export default function DemoPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <div className="text-2xl font-bold text-amber-700">12k+</div>
-                    <div className="text-[10px] font-bold uppercase text-slate-600">Students Enrolled</div>
+                    <div className="text-xs font-bold uppercase text-slate-700">Students Enrolled</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-amber-700">99.9%</div>
-                    <div className="text-[10px] font-bold uppercase text-slate-600">Uptime Efficiency</div>
+                    <div className="text-xs font-bold uppercase text-slate-700">Uptime Efficiency</div>
                   </div>
                 </div>
               </div>
