@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PremiumFooter, PremiumNav } from "../components/premium-chrome";
+import { QuoteIcon, UserIcon } from "../ui/icons";
 
 export default function DemoPage() {
   return (
@@ -132,27 +133,27 @@ export default function DemoPage() {
                 "Said Mohamed",
                 "CEO, Tanzan Logistics",
                 "Dar Web Solutions did not just build a site; they understood our business model.",
-                "SM",
+                "bg-blue-800 text-white",
               ],
               [
                 "Amina Juma",
                 "Founder, Juma Designs",
                 "The mobile-first approach was exactly what we needed for our Dar clients.",
-                "AJ",
+                "bg-amber-700 text-white",
               ],
               [
                 "Rashid K.",
                 "Director, Coastal Estates",
                 "Their attention to detail and transparency during the process was world-class.",
-                "RK",
+                "bg-slate-700 text-white",
               ],
-            ].map(([name, role, quote, initials]) => (
+            ].map(([name, role, quote, avatarClass]) => (
               <div key={name} className="relative pt-12">
-                <span className="absolute left-0 top-0 text-6xl text-amber-300/60">&quot;</span>
+                <QuoteIcon className="absolute left-0 top-0 h-12 w-12 text-amber-300/60" />
                 <p className="relative z-10 mb-8 text-lg italic leading-relaxed text-slate-600">{quote}</p>
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-800 font-bold text-white">
-                    {initials}
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-full ${avatarClass}`}>
+                    <UserIcon className="h-5 w-5" />
                   </div>
                   <div>
                     <div className="font-bold text-blue-900">{name}</div>

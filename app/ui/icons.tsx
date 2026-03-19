@@ -90,3 +90,107 @@ export function StepIcon(props: IconProps) {
   );
 }
 
+export function GlobeIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm7.9 9h-3.18a15.8 15.8 0 0 0-1.08-5A8.04 8.04 0 0 1 19.9 11ZM12 4c.88 0 2.22 2.08 2.67 7H9.33c.45-4.92 1.79-7 2.67-7Zm-3.64 2a15.8 15.8 0 0 0-1.08 5H4.1a8.04 8.04 0 0 1 4.26-5ZM4.1 13h3.18a15.8 15.8 0 0 0 1.08 5 8.04 8.04 0 0 1-4.26-5Zm7.9 7c-.88 0-2.22-2.08-2.67-7h5.34c-.45 4.92-1.79 7-2.67 7Zm3.64-2a15.8 15.8 0 0 0 1.08-5h3.18a8.04 8.04 0 0 1-4.26 5Z" />
+    </svg>
+  );
+}
+
+export function CheckCircleIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm-1.1 14.2L7.7 13l1.4-1.4 1.8 1.8 4.1-4.1 1.4 1.4Z" />
+    </svg>
+  );
+}
+
+export function BoltIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6Z" />
+    </svg>
+  );
+}
+
+export function ChatIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+    </svg>
+  );
+}
+
+export function UserIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z" />
+    </svg>
+  );
+}
+
+export function TrendUpIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M3 17h2.59l4.7-4.7 3 3L21 7.59V10h2V4h-6v2h2.59l-6.29 6.29-3-3L3 16.59Z" />
+    </svg>
+  );
+}
+
+export function MapPinIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z" />
+    </svg>
+  );
+}
+
+export function MailIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M3 6h18a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Zm0 2v.2l9 5.4 9-5.4V8l-9 5.4Z" />
+    </svg>
+  );
+}
+
+export function BeaconIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M11 7h2v6h-2Zm0 8h2v2h-2Zm1-13a9 9 0 0 0-6.36 2.64l1.42 1.42a7 7 0 0 1 9.88 0l1.42-1.42A9 9 0 0 0 12 2Zm0 4a5 5 0 0 0-3.54 1.46l1.42 1.42a3 3 0 0 1 4.24 0l1.42-1.42A5 5 0 0 0 12 6Z" />
+    </svg>
+  );
+}
+
+export function RocketIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M14 3c4 0 7 3 7 7 0 3.5-2.55 6.4-6 6.92V21l-3-2-3 2v-4.08C5.55 16.4 3 13.5 3 10c0-4 3-7 7-7h4Zm-2 4a2 2 0 1 0 2 2 2 2 0 0 0-2-2Z" />
+    </svg>
+  );
+}
+
+export function ArrowRightIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M13.17 6 11.76 7.41 15.34 11H4v2h11.34l-3.58 3.59L13.17 18 19.59 11.59 13.17 6Z" />
+    </svg>
+  );
+}
+
+export function LinkedInIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" {...props}>
+      <path fill="currentColor" d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12ZM5.5 9.75h2.88V19H5.5V9.75Zm4.5 0h2.76v1.26h.04c.38-.73 1.32-1.5 2.72-1.5 2.9 0 3.43 1.9 3.43 4.38V19h-2.88v-4.53c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39V19H10V9.75Z" />
+    </svg>
+  );
+}
+
+export function QuoteIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" {...props}>
+      <path fill="currentColor" d="M7 11h4v8H3v-8a8 8 0 0 1 8-8v3a5 5 0 0 0-4 5Zm10 0h4v8h-8v-8a8 8 0 0 1 8-8v3a5 5 0 0 0-4 5Z" />
+    </svg>
+  );
+}
+

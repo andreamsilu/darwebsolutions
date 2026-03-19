@@ -1,6 +1,15 @@
 import Link from "next/link";
 import { PremiumFooter, PremiumNav } from "../components/premium-chrome";
-import { InstagramIcon, WhatsAppIcon } from "../ui/icons";
+import {
+  ArrowRightIcon,
+  BeaconIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  MailIcon,
+  MapPinIcon,
+  RocketIcon,
+  WhatsAppIcon,
+} from "../ui/icons";
 
 export default function ContactPage() {
   return (
@@ -98,7 +107,7 @@ export default function ContactPage() {
                   type="submit"
                 >
                   Send Message
-                  <span>→</span>
+                  <ArrowRightIcon className="h-4 w-4" />
                 </button>
               </form>
             </div>
@@ -112,7 +121,7 @@ export default function ContactPage() {
                   Dar es Salaam Office
                 </h2>
                 <div className="mb-6 flex items-start gap-4">
-                  <span className="mt-1 text-blue-900">📍</span>
+                  <MapPinIcon className="mt-1 h-5 w-5 text-blue-900" />
                   <p className="text-lg text-slate-600">
                     7th Floor, Tanzanite Park,
                     <br />
@@ -122,7 +131,7 @@ export default function ContactPage() {
                   </p>
                 </div>
                 <div className="mb-10 flex items-center gap-4">
-                  <span className="text-blue-900">✉</span>
+                  <MailIcon className="h-5 w-5 text-blue-900" />
                   <a
                     className="text-lg font-medium text-blue-900 hover:underline"
                     href="mailto:hello@darwebsolutions.co.tz"
@@ -139,7 +148,9 @@ export default function ContactPage() {
                   alt="Map view of Dar es Salaam business district"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="rounded-full bg-blue-800 p-4 text-white shadow-2xl">📡</div>
+                  <div className="rounded-full bg-blue-800 p-4 text-white shadow-2xl">
+                    <BeaconIcon className="h-6 w-6" />
+                  </div>
                 </div>
                 <div className="absolute bottom-4 left-4 rounded-lg bg-white/90 px-3 py-1.5 text-xs font-bold text-blue-900 backdrop-blur">
                   VISIT US IN VICTORIA
@@ -166,7 +177,7 @@ export default function ContactPage() {
                     href="#"
                   >
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-600 text-white">
-                      in
+                      <LinkedInIcon className="h-4 w-4" />
                     </span>
                     <span className="text-sm font-bold text-slate-900 group-hover:text-blue-900">
                       LinkedIn
@@ -196,7 +207,7 @@ export default function ContactPage() {
                   target="_blank"
                 >
                   Start Free Consultation
-                  <span>🚀</span>
+                  <RocketIcon className="h-5 w-5" />
                 </Link>
               </div>
             </div>

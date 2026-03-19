@@ -1,6 +1,15 @@
 import Link from "next/link";
 import { PremiumFooter, PremiumNav } from "./components/premium-chrome";
-import { InstagramIcon, WhatsAppIcon } from "./ui/icons";
+import {
+  BoltIcon,
+  ChatIcon,
+  CheckCircleIcon,
+  GlobeIcon,
+  InstagramIcon,
+  TrendUpIcon,
+  UserIcon,
+  WhatsAppIcon,
+} from "./ui/icons";
 
 export default function Home() {
   return (
@@ -25,7 +34,7 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-3xl bg-white p-12 shadow-xl md:col-span-8">
             <div className="relative z-10 flex h-full flex-col">
               <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-800/10">
-                <span className="text-3xl text-blue-800">🌐</span>
+                <GlobeIcon className="h-8 w-8 text-blue-800" />
               </div>
               <h2 className="mb-4 font-headline text-3xl font-bold text-blue-900">
                 Professional Business Websites
@@ -42,7 +51,7 @@ export default function Home() {
                   "Local Hosting Support",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
-                    <span className="text-xl text-amber-700">✓</span>
+                    <CheckCircleIcon className="h-5 w-5 text-amber-700" />
                     <span className="font-medium text-slate-900">{item}</span>
                   </li>
                 ))}
@@ -54,7 +63,7 @@ export default function Home() {
           <div className="relative flex flex-col justify-between overflow-hidden rounded-3xl bg-blue-800 p-12 text-white md:col-span-4">
             <div>
               <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-white/10">
-                <span className="text-3xl text-white">⚡</span>
+                <BoltIcon className="h-8 w-8 text-white" />
               </div>
               <h2 className="mb-4 font-headline text-3xl font-bold">Rapid 2-3 Day Delivery</h2>
               <p className="mb-6 text-blue-100">
@@ -76,7 +85,7 @@ export default function Home() {
           <div className="flex flex-col gap-12 rounded-3xl bg-slate-100 p-12 md:col-span-12 lg:col-span-7 md:flex-row md:items-center">
             <div className="flex-1">
               <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-xl bg-amber-700/10">
-                <span className="text-3xl text-amber-700">💬</span>
+                <ChatIcon className="h-8 w-8 text-amber-700" />
               </div>
               <h2 className="mb-4 font-headline text-3xl font-bold text-blue-900">
                 WhatsApp Ordering Integration
@@ -97,7 +106,7 @@ export default function Home() {
               <div className="relative rounded-xl bg-white p-6 shadow-xl">
                 <div className="mb-4 flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">
-                    👤
+                    <UserIcon className="h-5 w-5" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-400">CUSTOMER</div>
@@ -123,7 +132,9 @@ export default function Home() {
               </p>
               <div className="mt-auto text-4xl font-black text-amber-900/20">CONSULT</div>
             </div>
-            <div className="absolute bottom-0 right-0 text-[12rem] opacity-10">↗</div>
+            <div className="absolute bottom-10 right-8 opacity-10">
+              <TrendUpIcon className="h-28 w-28 text-amber-900" />
+            </div>
           </div>
         </section>
 
