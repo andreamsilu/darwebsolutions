@@ -28,7 +28,7 @@ export function PremiumNav({ active }: PremiumNavProps) {
             D
           </span>
           <div className="font-headline text-2xl font-bold tracking-tight text-white">
-            Dar Web Solutions
+            DarWebSolutions
           </div>
         </div>
         <div className="hidden items-center gap-8 md:flex">
@@ -85,7 +85,7 @@ export function PremiumFooter() {
       <footer className="bg-blue-950 text-blue-100">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-16 md:grid-cols-4">
         <div>
-          <div className="mb-4 font-headline text-xl font-bold text-white">Dar Web Solutions</div>
+          <div className="mb-4 font-headline text-xl font-bold text-white">DarWebSolutions</div>
           <p className="text-sm leading-relaxed text-blue-200">
             Crafting high-performance digital solutions for the Tanzanian business landscape.
           </p>
@@ -122,7 +122,7 @@ export function PremiumFooter() {
         </div>
         </div>
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-blue-900 px-8 py-8 md:flex-row">
-          <p className="text-sm text-blue-300">© 2024 Dar Web Solutions. Built in Dar es Salaam, Tanzania.</p>
+          <p className="text-sm text-blue-300">© 2024 DarWebSolutions. Built in Dar es Salaam, Tanzania.</p>
         </div>
       </footer>
 
