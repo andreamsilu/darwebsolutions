@@ -44,7 +44,7 @@ export default function ProblemPage() {
               structured digital experience that builds trust and guides customers to order.
             </p>
           </div>
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 animate-zoom-soft">
             <Image
               src={heroTopImage}
               alt="Business owner facing customer communication challenges"
@@ -198,8 +198,8 @@ export default function ProblemPage() {
           </div>
         </section>
 
-        <section className="mx-auto mt-32 max-w-7xl px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-blue-900 p-16 text-center text-white">
+        <section className="mx-auto mt-32 max-w-7xl px-8 animate-fade-up-delay-2">
+          <div className="relative overflow-hidden rounded-3xl bg-blue-900 p-16 text-center text-white transition-transform duration-300 hover:-translate-y-1">
             <div className="absolute inset-0">
               <Image
                 src={ctaImage}

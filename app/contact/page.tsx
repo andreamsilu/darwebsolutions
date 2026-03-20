@@ -92,7 +92,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           </div>
         </section>
 
-        <section className="bg-slate-100 py-24">
+        <section className="bg-slate-100 py-24 animate-fade-up-delay-1">
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-8 lg:grid-cols-2">
             <div className="rounded-xl bg-white p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1 md:p-12 animate-fade-up-delay-1">
               <h2 className="mb-8 font-headline text-3xl font-bold text-blue-900">Send an Inquiry</h2>
@@ -253,8 +253,8 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           </div>
         </section>
 
-        <section className="mx-auto my-20 max-w-7xl px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-blue-900 p-12 text-center md:p-20">
+        <section className="mx-auto my-20 max-w-7xl px-8 animate-fade-up-delay-2">
+          <div className="relative overflow-hidden rounded-3xl bg-blue-900 p-12 text-center transition-transform duration-300 hover:-translate-y-1 md:p-20">
             <div className="absolute inset-0 bg-linear-to-br from-blue-900 to-blue-700 opacity-90" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,white_1px,transparent_0)] bg-size-[40px_40px] opacity-10" />
             <div className="relative z-10 space-y-8">

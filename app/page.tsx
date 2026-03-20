@@ -72,7 +72,7 @@ export default function Home() {
               designed to convert visitors into loyal customers.
             </p>
           </div>
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 animate-zoom-soft">
             <Image
               src={heroTopImage}
               alt="Business team collaborating on web strategy"
@@ -220,8 +220,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto mt-32 max-w-7xl px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-blue-900 p-16 text-center text-white">
+        <section className="mx-auto mt-32 max-w-7xl px-8 animate-fade-up-delay-2">
+          <div className="relative overflow-hidden rounded-3xl bg-blue-900 p-16 text-center text-white transition-transform duration-300 hover:-translate-y-1">
             <div className="absolute inset-0">
               <Image
                 src={ctaBackgroundImage}

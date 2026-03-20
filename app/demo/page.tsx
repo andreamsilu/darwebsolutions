@@ -43,7 +43,7 @@ export default function DemoPage() {
               just look good - they perform.
             </p>
           </div>
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 animate-zoom-soft">
             <Image
               src={heroTopImage}
               alt="Project showcase and digital collaboration meeting"
@@ -168,7 +168,7 @@ export default function DemoPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-8 py-32">
+        <section className="mx-auto max-w-7xl px-8 py-32 animate-fade-up-delay-2">
           <div className="mb-16 text-center">
             <span className="mb-4 block font-headline text-sm font-extrabold uppercase tracking-widest text-amber-700">
               Trust &amp; Results
@@ -213,8 +213,8 @@ export default function DemoPage() {
           </div>
         </section>
 
-        <section className="mx-auto mb-32 max-w-7xl px-8">
-          <div className="relative overflow-hidden rounded-xl bg-blue-900 p-12 md:p-20">
+        <section className="mx-auto mb-32 max-w-7xl px-8 animate-fade-up-delay-2">
+          <div className="relative overflow-hidden rounded-xl bg-blue-900 p-12 transition-transform duration-300 hover:-translate-y-1 md:p-20">
             <div className="absolute right-0 top-0 h-full w-1/3 translate-x-1/2 -skew-x-12 bg-blue-700 opacity-20" />
             <div className="relative z-10 max-w-2xl">
               <h2 className="mb-6 font-headline text-4xl font-bold text-white">

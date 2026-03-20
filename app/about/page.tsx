@@ -36,7 +36,7 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-12">
+        <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-12 animate-fade-up-delay-1">
           <div className="relative overflow-hidden rounded-3xl bg-white p-10 shadow-xl transition-transform duration-300 hover:-translate-y-1 md:col-span-7 animate-fade-up-delay-1">
             <Image
               src={teamImage}

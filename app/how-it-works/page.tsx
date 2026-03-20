@@ -36,7 +36,7 @@ export default function HowItWorksPage() {
           </p>
         </section>
 
-        <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-3">
+        <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-3 animate-fade-up-delay-1">
           <article className="overflow-hidden rounded-3xl bg-white shadow-xl transition-transform duration-300 hover:-translate-y-1 animate-fade-up-delay-1">
             <Image
               src={contactImage}
