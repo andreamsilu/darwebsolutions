@@ -13,12 +13,23 @@ function navClass(active: boolean) {
     : "inline-flex min-h-11 items-center text-blue-100 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 rounded-sm";
 }
 
+function mobileNavClass(active: boolean) {
+  return active
+    ? "rounded-lg bg-blue-800 px-3 py-2 text-xs font-semibold text-white"
+    : "rounded-lg px-3 py-2 text-xs font-medium text-blue-100 hover:bg-blue-800/60";
+}
+
 export function PremiumNav({ active }: PremiumNavProps) {
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-blue-800/60 bg-blue-900/95 backdrop-blur-md">
+    <nav className="fixed top-0 z-50 w-full border-b border-blue-800/70 bg-linear-to-r from-blue-950 via-blue-900 to-blue-950 shadow-lg shadow-blue-950/30 backdrop-blur-md animate-fade-up">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
-        <div className="font-headline text-2xl font-bold tracking-tight text-white">
-          Dar Web Solutions
+        <div className="flex items-center gap-3">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-300 text-xs font-black text-amber-950">
+            D
+          </span>
+          <div className="font-headline text-2xl font-bold tracking-tight text-white">
+            Dar Web Solutions
+          </div>
         </div>
         <div className="hidden items-center gap-8 md:flex">
           <Link className={navClass(active === "home")} href="/">
@@ -37,18 +48,32 @@ export function PremiumNav({ active }: PremiumNavProps) {
         <div className="flex items-center gap-4">
           <Link
             className="hidden min-h-11 items-center rounded-xl px-4 py-2 font-medium text-blue-100 transition-all hover:bg-blue-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900 lg:inline-flex"
-            href="https://wa.me/255000000000"
+            href="https://wa.me/255769289824"
             target="_blank"
           >
             WhatsApp
           </Link>
-          <button
+          <Link
             className="inline-flex min-h-11 items-center rounded-xl bg-amber-300 px-6 py-2.5 font-semibold text-amber-950 transition-transform hover:bg-amber-200 active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-100 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-900"
-            type="button"
+            href="/contact"
           >
             Get Started
-          </button>
+          </Link>
         </div>
+      </div>
+      <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 pb-3 md:hidden">
+        <Link className={mobileNavClass(active === "home")} href="/">
+          Home
+        </Link>
+        <Link className={mobileNavClass(active === "services")} href="/solution">
+          Services
+        </Link>
+        <Link className={mobileNavClass(active === "portfolio")} href="/demo">
+          Portfolio
+        </Link>
+        <Link className={mobileNavClass(active === "contact")} href="/contact">
+          Contact
+        </Link>
       </div>
     </nav>
   );
@@ -92,7 +117,7 @@ export function PremiumFooter() {
           <ul className="space-y-4">
             <li><a className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="#">LinkedIn</a></li>
             <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="https://instagram.com/darwebsolutions" target="_blank">Instagram</Link></li>
-            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="https://wa.me/255000000000" target="_blank">WhatsApp</Link></li>
+            <li><Link className="inline-flex min-h-11 items-center text-sm text-blue-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 rounded-sm" href="https://wa.me/255769289824" target="_blank">WhatsApp</Link></li>
           </ul>
         </div>
         </div>
@@ -102,10 +127,10 @@ export function PremiumFooter() {
       </footer>
 
       <Link
-        href="https://wa.me/255000000000"
+        href="https://wa.me/255769289824"
         target="_blank"
         title="Chat on WhatsApp"
-        className="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform hover:scale-110 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
+        className="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform hover:scale-110 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70 animate-float-soft"
       >
         <WhatsAppIcon className="h-7 w-7" />
       </Link>

@@ -1,34 +1,73 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PremiumFooter, PremiumNav } from "../components/premium-chrome";
 import { QuoteIcon, UserIcon } from "../ui/icons";
 
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description:
+    "Explore websites and chatbot-enabled digital projects delivered for Tanzanian businesses with measurable results.",
+  alternates: { canonical: "/demo" },
+};
+
+export const revalidate = 3600;
+
 export default function DemoPage() {
+  const logisticsImage =
+    "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1800&q=80";
+  const fashionImage =
+    "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80";
+  const realtyImage =
+    "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80";
+  const edtechImage =
+    "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80";
+  const heroTopImage =
+    "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80";
+
   return (
     <div className="bg-slate-50 font-body text-slate-900 antialiased">
       <PremiumNav active="portfolio" />
 
       <main className="pt-32">
-        <section className="mx-auto mb-24 max-w-7xl px-8">
-          <span className="mb-4 block font-headline text-sm font-extrabold uppercase tracking-widest text-amber-700">
-            Our Work
-          </span>
-          <h1 className="mb-8 font-headline text-5xl font-extrabold leading-tight text-blue-900 md:text-7xl">
-            Architecting Digital <br /> Success in Tanzania.
-          </h1>
-          <p className="max-w-2xl text-xl leading-relaxed text-slate-600">
-            We combine global design standards with local market insights to build websites that do not
-            just look good - they perform.
-          </p>
+        <section className="mx-auto mb-24 grid max-w-7xl grid-cols-1 items-center gap-10 px-8 md:grid-cols-12 animate-fade-up">
+          <div className="md:col-span-7">
+            <span className="mb-4 block font-headline text-sm font-extrabold uppercase tracking-widest text-amber-700">
+              Our Work
+            </span>
+            <h1 className="mb-8 font-headline text-5xl font-extrabold leading-tight text-blue-900 md:text-7xl">
+              Architecting Digital <br /> Success in Tanzania.
+            </h1>
+            <p className="max-w-2xl text-xl leading-relaxed text-slate-600">
+              We combine global design standards with local market insights to build websites that do not
+              just look good - they perform.
+            </p>
+          </div>
+          <div className="md:col-span-5">
+            <Image
+              src={heroTopImage}
+              alt="Project showcase and digital collaboration meeting"
+              width={1400}
+              height={900}
+              className="h-72 w-full rounded-3xl object-cover shadow-xl md:h-96"
+              sizes="(max-width: 768px) 100vw, 42vw"
+              priority
+            />
+          </div>
         </section>
 
         <section className="mx-auto max-w-7xl bg-slate-100 px-8 py-20">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-            <div className="group relative overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 md:col-span-8">
+            <div className="group relative overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-1 md:col-span-8 animate-fade-up-delay-1">
               <div className="aspect-video overflow-hidden">
-                <img
+                <Image
                   alt="Logistics Dashboard interface"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCU8pdewjsXLf7BM4Kr_BioH2zajZexx2e1hgDvOFc_GPF6o_q202bamajDQzEwdcRffheEWqyG0p0NOZ48YDoaiG9NNx-LyGcqvAkb_0-LVuBWstbo2UUR4y1x8BacupC9qej8FQciwFhhrJdcNEJtvO4fc2rKLEikKvgk60p3UaMXVvY-X155UlVsujyN5Jx4qkWyv1pn1VuR0YXC2luoHG9_gKBIsfbbakPECFeybDqunb4WVLLsT7DDql0G3jxazSCjlkFOu8"
+                  src={logisticsImage}
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                  priority
                 />
               </div>
               <div className="p-8">
@@ -57,12 +96,15 @@ export default function DemoPage() {
               </div>
             </div>
 
-            <div className="group overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 md:col-span-4">
+            <div className="group overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-1 md:col-span-4 animate-fade-up-delay-1">
               <div className="aspect-square">
-                <img
+                <Image
                   alt="Mlimani Fashion Hub storefront"
                   className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtIPT16vIypN2qiTTYfHvsTtYqMBhN0KZ55aOJGAM1kqcLKSLmLUXj6O_1IWzooagLxQ96LCJ_oMeV9-fsd23jvmZgKIQcypBoR4pmUiyDIwmPDocxTojIT2YciOxyMQnFNWm9_HWyTF6bGrw-RvfvyiGJlELme5bSe9b4To8PesraiRArdOASkYlxRuQl2tjoKb3rj38brLole150nZkXRBd8GECxQppzYU3QjydEdpqcNHaXDTT8IflTypiqs1T0GmHpOdLrTJM"
+                  src={fashionImage}
+                  width={900}
+                  height={900}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="p-6">
@@ -74,12 +116,15 @@ export default function DemoPage() {
               </div>
             </div>
 
-            <div className="group overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 md:col-span-4">
+            <div className="group overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-1 md:col-span-4 animate-fade-up-delay-2">
               <div className="aspect-square">
-                <img
+                <Image
                   alt="Real Estate Listing Portal"
                   className="h-full w-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDAM-kIX49up3mNErMi6NLfqLNHtkX09BlU1sMesrOJ6xlpLJTFn-RRar0eq4jrmEIPOI5d_H_v1PlnGo3h5kdo-XHxBwtugNfs-B1MbtnVZeg68HtEgjTCCuCursgZfbCeFkFT56vS8y0mnFgaS584JCbvXql9uPzy-uv0TGhW6iyS4ST3q2x1nbAxOGAu2MPlHL0KmzImoeMxUc7OQv0EupA1KSooFwMcZHKlDowr6cYIE44x3cU1lNY6meINzJOefyxaIlX1DI"
+                  src={realtyImage}
+                  width={900}
+                  height={900}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="p-6">
@@ -91,12 +136,15 @@ export default function DemoPage() {
               </div>
             </div>
 
-            <div className="group flex flex-col overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 md:col-span-8 md:flex-row">
+            <div className="group flex flex-col overflow-hidden rounded-xl bg-white shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-1 md:col-span-8 md:flex-row animate-fade-up-delay-2">
               <div className="overflow-hidden md:w-1/2">
-                <img
+                <Image
                   alt="Educational Platform Screenshot"
                   className="h-full w-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVOq3u5LOCFigRHP9HGap_jyNkMGkDziYYtJTzrXngXtsfh7hpZhOYaOPUCKUCBR1KJL81o0iH2Y1FwKRaPpj_WIr6DGV2tYJYmQETrepe7YlaKpL73__XIaqiQkSjDWHBEWFNryEgdfDOjXd5dX8GCVm04G4Migb5ObruAFFxfV7yFFNaW_Ww8W7lwD8v7V1dEEtlyi_jq4J5C5abmCpKM8hqSRT5FAri5KiMC_gxgVB0BbJKIpDus162L5rHHL8rl_I71zlrgNo"
+                  src={edtechImage}
+                  width={1000}
+                  height={900}
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
               <div className="flex flex-col justify-center p-8 md:w-1/2">
@@ -176,18 +224,18 @@ export default function DemoPage() {
                 Let&apos;s discuss how we can bring architectural precision to your digital presence.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button
+                <Link
+                  href="/contact"
                   className="rounded-xl bg-amber-300 px-8 py-4 font-bold text-amber-950 transition-all active:scale-95"
-                  type="button"
                 >
                   Start a Project
-                </button>
-                <button
+                </Link>
+                <Link
+                  href="/how-it-works"
                   className="rounded-xl border border-white/20 px-8 py-4 font-bold text-white transition-all hover:bg-white/10"
-                  type="button"
                 >
                   View Our Process
-                </button>
+                </Link>
               </div>
             </div>
           </div>

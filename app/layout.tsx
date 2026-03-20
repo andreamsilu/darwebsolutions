@@ -13,9 +13,31 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Dar Web Solutions | Simple Websites for Dar es Salaam Businesses",
+  metadataBase: new URL("https://darwebsolutions.co.tz"),
+  title: {
+    default: "Dar Web Solutions | Websites for Dar es Salaam Businesses",
+    template: "%s | Dar Web Solutions",
+  },
   description:
     "Dar Web Solutions builds simple, mobile-first websites with WhatsApp integration for small and medium businesses in Dar es Salaam.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Dar Web Solutions | Websites for Dar es Salaam Businesses",
+    description:
+      "Simple, mobile-first websites with WhatsApp integration for Tanzanian businesses.",
+    url: "/",
+    siteName: "Dar Web Solutions",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dar Web Solutions",
+    description:
+      "Simple, mobile-first websites with WhatsApp integration for Tanzanian businesses.",
+  },
 };
 
 export default function RootLayout({
